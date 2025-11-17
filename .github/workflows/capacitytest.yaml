@@ -9,11 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout repo
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # Install Python
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -38,7 +36,5 @@ jobs:
     - name: Upload Locust Results
       uses: actions/upload-artifact@v3
       with:
-        name: locust-results
-        path: results
         name: locust-results
         path: results
